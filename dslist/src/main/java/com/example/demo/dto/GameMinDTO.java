@@ -1,0 +1,47 @@
+package com.example.demo.dto;
+
+import com.example.demo.model.Game;
+
+public class GameMinDTO {
+	
+	private Long id;
+	private String title;
+	private Integer year;
+	private String imgUrl;
+	private String shortDescription;
+	
+	public GameMinDTO() {}
+
+	public GameMinDTO(Game model	) {
+		
+		this.id = model.getId();
+		this.title = model.getTitle();
+		this.year = model.getYear();
+		this.imgUrl = model.getImgUrl();
+		this.shortDescription = model.getShortDescription();
+	}
+
+	public Long getId() {
+		return id;
+	}
+
+	public String getTitle() {
+		return title;
+	}
+
+	public Integer getYear() {
+		return year;
+	}
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public String getShortDescription() {
+		return shortDescription;
+	}
+	
+	
+	
+
+}

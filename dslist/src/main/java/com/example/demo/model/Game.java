@@ -26,6 +26,9 @@ public class Game {
 	private String platforms;
 	private Double score;
 	private String imgUrl;
+	
+	/*essa anotação abaixo permite escrever um texto a
+	cima de 255 caracteres no string*/
 	@Column(columnDefinition = "TEXT")
 	private String shortDescription;
 	@Column(columnDefinition = "TEXT")
