@@ -13,6 +13,7 @@ import com.example.demo.dto.GameDTO;
 import com.example.demo.dto.GameListDTO;
 import com.example.demo.dto.GameMinDTO;
 import com.example.demo.services.GameListService;
+import com.example.demo.services.GameService;
 
 @RestController
 @RequestMapping(value = "/lists")
@@ -21,9 +22,16 @@ public class GameListController {
 	@Autowired
 	private GameListService gameListService;
 	
+	@Autowired
+	private GameService gameService;
 	
 	
 	
+	@GetMapping(value = "/{listId}/games")
+		public List<GameMinDTO> findByList(@PathVariable Long listId){
+		List<GameMinDTO> result = gameService.findByList(listId);
+		return result;
+	}
 	
 	@GetMapping
 	public List<GameListDTO> findAll(){

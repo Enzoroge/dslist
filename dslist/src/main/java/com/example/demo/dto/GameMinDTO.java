@@ -1,6 +1,7 @@
 package com.example.demo.dto;
 
 import com.example.demo.model.Game;
+import com.example.demo.projections.GameMinProjection;
 
 public class GameMinDTO {
 	
@@ -14,6 +15,18 @@ public class GameMinDTO {
 
 	public GameMinDTO(Game model	) {
 		
+		this.id = model.getId();
+		this.title = model.getTitle();
+		this.year = model.getYear();
+		this.imgUrl = model.getImgUrl();
+		this.shortDescription = model.getShortDescription();
+	}
+	
+	
+	
+	
+
+	public GameMinDTO(GameMinProjection model) {
 		this.id = model.getId();
 		this.title = model.getTitle();
 		this.year = model.getYear();
