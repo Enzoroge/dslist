@@ -29,7 +29,7 @@ public class GameMinDTO {
 	public GameMinDTO(GameMinProjection model) {
 		this.id = model.getId();
 		this.title = model.getTitle();
-		this.year = model.getYear();
+		this.year = model.getGameYear();
 		this.imgUrl = model.getImgUrl();
 		this.shortDescription = model.getShortDescription();
 	}
